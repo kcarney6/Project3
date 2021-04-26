@@ -1,0 +1,18 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<input id="title"> by <input id="artist">
+<button onclick = "getLyrics()">Find Lyrics</button>
+<div id = "output"></div>
+<script>
+    var getLyrics = function()
+    {
+      $.get("https://api.lyrics.ovh/v1/" + document.getElementById("artist").value +"/"
+      + document.getElementById("title").value, function(data)
+      {
+        document.getElementById("output").innerHTML=data.lyrics.replace(new RegExp("\n", "g"), "<br>")
+      })
+    }
+</script>
+</html>
