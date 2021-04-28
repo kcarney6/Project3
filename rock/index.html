@@ -54,9 +54,7 @@
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col logo_section">
                         <div class="full">
                             <div class="center-desk">
-                                <div class="logo">
-                                    <a href="index.html"><img src="images/logo.jpg" alt="logo" /></a>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -66,21 +64,16 @@
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
                                         <li class="active"> <a href="index.html">Project 3</a> </li>
-                                        <li> <a href="about.html">Kevin Carney</a> </li>
-                                        <li> <a href="album.html"> Alec Benton</a> </li>
-                                        <li> <a href="blog.html">Maddie Molina</a> </li>
+                                        <li> <a href="https://www.instagram.com/carnd0g/">Kevin Carney</a> </li>
+                                        <li> <a href="https://www.instagram.com/alec_benton/"> Alec Benton</a> </li>
+                                        <li> <a href="https://www.instagram.com/mmmolina4/">Maddie Molina</a> </li>
                                         
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
-                        <form class="search">
-                            <input class="form-control" type="text" placeholder="Search">
-                            <button><img src="images/search_icon.png"></button>
-                        </form>
-                    </div>
+                    
                 </div>
             </div>
             <!-- end header inner -->
@@ -94,20 +87,38 @@
                 <div class="text-bg relative">
                     <h1><br><span class="Perfect">Your Favorite Music</span><br>Learn Every Word</h1>
                     <p>Find the lyrics to your favorite songs!
-                        <br> Just type the song and the artist in the seach bar bellow</p>
+                        <br> Just type the song and the artist in the search bar below</p>
                     
                 </div>
 
             </div>
         </div>
         <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js">
-        </script>
-        <input id="title"> by <input id="artist">
-        <button onclick = "getLyrics()">Find Lyrics</button>
-        <div id = "output"></div>
-        <script>
-            var getLyrics = function()
-            {
+
+    </script>
+        
+            <input style = text-align:center; id="title" input class="form-control" type="text" placeholder="Enter Song Title"> <h4 style=text-align:center;> 
+         </h4> <input style= text-align:center; id="artist" input class="form-control" type="text" placeholder="Enter Artist Name">
+                <button style= text-align:center; class = "button" onclick = "getLyrics()" >  Get Lyrics</button>   
+                    <div style= color:black; id = "output" > </div>
+                     </div>
+              </div>
+          </div>
+      </div>
+        </div>
+        </div>
+        </div>
+        
+     <script>
+        
+        /*
+       *****************************************************************************************************************
+       * Bellow is the function where we call the API. The function is called by the button Get Lyrics featured above. *
+       *****************************************************************************************************************
+        */    
+        
+    var getLyrics = function()
+            {
               $.get("https://api.lyrics.ovh/v1/" + document.getElementById("artist").value +"/"
               + document.getElementById("title").value, function(data)
               {
@@ -138,9 +149,16 @@
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                     <div class="for-box">
-                        <i><img src="icon/icon4.png" alt="icon"/></i>
-                        <h3>Custom Gallery</h3>
-                        <p>t is a long established fact that a reader will be distracted by the readable </p>
+                        <i><img src="icon/icon1.png" alt="icon"/></i>
+                        <h3>Memorize Every Line!</h3>
+                        <p>Tip: Follow along with the music playing</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="for-box">
+                        <i><img src="icon/icon3.png" alt="icon"/></i>
+                        <h3>Sing with your friends!</h3>
+                        <p>They will be impressed!</p>
                     </div>
                 </div>
             </div>
@@ -158,67 +176,26 @@
             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 padding">
                 <div class="text-box">
                     <div class="box">
-                        <i><img src="images/5.png"/></i>
-                        <h3>MEET OUR Music STARS</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable
-                            <br> content of a page when looking at its layout. The point of using Lorem </p>
-                        <a href="#">Read More</a>
+                        <i><img  src="images/5.png"/></i>
+                        <h3>STAY UP TO DATE ON ALL THE LATEST HITS</h3>
+                        <p>Want to know every lyric to your favorite songs?
+                            <br> Memorize them with us and sing with your friends! </p>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>
 
-    <!-- Download -->
-    <div id="screenshot" class="Lastestnews">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>Latest News</h2>
-                        <span>It is a long established fact that a reader will be distracted by the readable <br>content of a page when looking at its layout. The point of using Lorem </span>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <div class="news-box">
-                        <figure><img src="images/1.jpg" alt="img" /></figure>
-                        <h3>Live With Music</h3>
-                        <span> March 20</span><span>Comment</span>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, </p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <div class="news-box">
-                        <figure><img src="images/2.jpg" alt="img" /></figure>
-                        <h3>Best Music</h3>
-                        <span> March 20</span><span>Comment</span>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, </p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <div class="news-box">
-                        <figure><img src="images/3.jpg" alt="img" /></figure>
-                        <h3>Live With Music</h3>
-                        <span> March 20</span><span>Comment</span>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end Download -->
-
+<br> 
+   
     <!-- Albums -->
     <div id="screenshot" class="Albums">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>Albums-box </h2>
-                        <span>It is a long established fact that a reader will be distracted by the readable <br>content of a page when looking at its layout. The point of using Lorem </span>
-                    </div>
+                    
                 </div>
             </div>
             <div class="row">
@@ -283,9 +260,8 @@
                         <div class="address">
                             <h3>Contact Us</h3>
                             <ul class="locarion_icon">
-                                <li><img src="icon/1.png" alt="icon" />104 New York , USA</li>
-                                <li><img src="icon/2.png" alt="icon" />Phone : ( +71 5896547 )</li>
-                                <li><img src="icon/3.png" alt="icon" />Email : demo@email.com</li>
+                                <li><img src="icon/1.png" alt="icon" />Villanova PA, USA</li>
+                                <li><img src="icon/3.png" alt="icon" />Emails : kcarney6@villanova.edu abento01@villanova.edu mmolina5@villanova.edu</li>
 
                             </ul>
 
@@ -344,7 +320,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2019 All Rights Reserved. <a href="https://html.design/">Free html Templates</a></p>
+                <p>© 2021 All Rights Reserved. <a href="https://html.design/"></a></p>
             </div>
         </div>
     </footr>
